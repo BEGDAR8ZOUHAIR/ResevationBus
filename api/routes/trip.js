@@ -16,5 +16,12 @@ router.delete('/:id', verifyAdmin, deleteTrip);
 router.get('/:id', getTrip);
 // GET ALL
 router.get('/', getAllTrips);
+router.get('/countByCity', countTripsByCity);
+router.get('/countByType', countTripsByType);
+router.get('/bus/:id', getTripsByBus);
+
+
+
+
 
 export default router;

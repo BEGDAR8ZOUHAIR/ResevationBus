@@ -2,7 +2,12 @@
 # conception UML 
  -diagramme de classe: https://lucid.app/lucidchart/b12551d8-9f79-4311-8239-7f6de8404318/edit?invitationId=inv_ac8bfdca-bc90-47fe-9004-4097c031c29c&page=0_0#
 
- # REST API docs
+ # React Documentation
+    -yarn to install dependencies
+    -yarn start to start the project
+    -yarn add react-router-dom to install react-router-dom
+
+  # REST API docs
 
 ## Parameters
 
