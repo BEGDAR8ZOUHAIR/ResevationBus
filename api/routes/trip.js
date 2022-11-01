@@ -1,6 +1,6 @@
 import express from 'express';
 import Trip from '../models/trip.js';
-import { creatTrip, getAllTrips, getTrip, updateTrip, deleteTrip } from '../controllers/trip.js';
+import { creatTrip, getAllTrips, getTrip, updateTrip, deleteTrip, countByCity } from '../controllers/trip.js';
 import { verifyAdmin } from "../utils/verifyToken.js";
 
 const router = express.Router();
@@ -13,12 +13,12 @@ router.put('/:id',verifyAdmin, updateTrip);
 // DELETE
 router.delete('/:id', verifyAdmin, deleteTrip);
 // GET
-router.get('/:id', getTrip);
+router.get('/find/:id', getTrip);
 // GET ALL
 router.get('/', getAllTrips);
-router.get('/countByCity', countTripsByCity);
-router.get('/countByType', countTripsByType);
-router.get('/bus/:id', getTripsByBus);
+router.get('/countByCity', countByCity);
+router.get('/countByType', getAllTrips);
+router.get('/bus/:id');
 
 
 

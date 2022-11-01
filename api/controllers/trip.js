@@ -60,15 +60,10 @@ export const getAllTrips = async (req, res) => {
 };
 export const countByCity = async (req, res, next) =>
 {
-    const cities = req.query.cities.split(",");
+    console.log(req.body.cityDepart, req.body.cityArrival);
     try
     {
-        const list = await Promise.all(
-            cities.map((city) =>
-            {
-                return Trip.countDocuments({ city: city });
-            })
-        );
+        const list = await Trip.find({ cityDepart: req.body.cityDepart, cityArrival: req.body.cityArrival });
         res.status(200).json(list);
     } catch (err)
     {

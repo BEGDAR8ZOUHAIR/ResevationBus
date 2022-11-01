@@ -30,6 +30,7 @@ const List = () => {
             <div className="lsItem">
               <label>Arrival</label>
               <input placeholder={arrival} type="text" />
+              
             </div>
             <div className="lsItem">
               <label>Check-in Date</label>
