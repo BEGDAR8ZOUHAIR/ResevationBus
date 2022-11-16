@@ -1,9 +1,9 @@
 import {
-  faEarth,
+  faBus,
   faCalendarDays,
   faCar,
   faPerson,
-  faBusSimple,
+  faPlane,
   faTaxi,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -57,50 +57,50 @@ const Header = ({ type }) => {
       >
         <div className="headerList">
           <div className="headerListItem active">
-            <FontAwesomeIcon icon={faEarth} />
+            <FontAwesomeIcon icon={faBus} />
             <span>Stays</span>
           </div>
           <div className="headerListItem">
-            <FontAwesomeIcon icon={faBusSimple} />
+            <FontAwesomeIcon icon={faPlane} />
             <span>Flights</span>
           </div>
           <div className="headerListItem">
             <FontAwesomeIcon icon={faCar} />
-            <span>Car </span>
+            <span>Car rentals</span>
           </div>
           <div className="headerListItem">
-            <FontAwesomeIcon icon={faEarth} />
+            <FontAwesomeIcon icon={faBus} />
             <span>Attractions</span>
           </div>
           <div className="headerListItem">
             <FontAwesomeIcon icon={faTaxi} />
-            <span>taxis</span>
+            <span>Airport taxis</span>
           </div>
         </div>
         {type !== "list" && (
           <>
             <h1 className="headerTitle">
-              A lifetime of discounts? It's Genius.
+              Achetez vos tickets d'autocar au meilleur prix!
             </h1>
             <p className="headerDesc">
-              Get rewarded for your travels – unlock instant savings of 10% 
+              Simple , Rapide  et sans frais supplémentaires 
             </p>
-            {/* <button className="headerBtn">Sign in / Register</button> */}
+            
             <div className="headerSearch">
               <div className="headerSearchItem">
-                <FontAwesomeIcon icon={faEarth} className="headerIcon" />
+                <FontAwesomeIcon icon={faBus} className="headerIcon" />
                 <input
                   type="text"
-                  placeholder="Where are you going?"
+                  placeholder="City depart?"
                   className="headerSearchInput"
                   onChange={(e) => setDestination(e.target.value)}
                 />
               </div>
               <div className="headerSearchItem">
-                <FontAwesomeIcon icon={faEarth} className="headerIcon" />
+                <FontAwesomeIcon icon={faBus} className="headerIcon" />
                 <input
                   type="text"
-                  placeholder="Where are you going?"
+                  placeholder="City arrival?"
                   className="headerSearchInput"
                   onChange={(e) => setArrival(e.target.value)}
                 />
@@ -175,27 +175,7 @@ const Header = ({ type }) => {
                         </button>
                       </div>
                     </div>
-                    <div className="optionItem">
-                      <span className="optionText">Room</span>
-                      <div className="optionCounter">
-                        <button
-                          disabled={options.room <= 1}
-                          className="optionCounterButton"
-                          onClick={() => handleOption("room", "d")}
-                        >
-                          -
-                        </button>
-                        <span className="optionCounterNumber">
-                          {options.room}
-                        </span>
-                        <button
-                          className="optionCounterButton"
-                          onClick={() => handleOption("room", "i")}
-                        >
-                          +
-                        </button>
-                      </div>
-                    </div>
+              
                   </div>
                 )}
               </div>

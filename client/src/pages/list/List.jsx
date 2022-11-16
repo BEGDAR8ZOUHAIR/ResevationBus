@@ -6,16 +6,38 @@ import { useState } from "react";
 import { format } from "date-fns";
 import { DateRange } from "react-date-range";
 import SearchItem from "../../components/searchItem/SearchItem";
+import { useEffect } from "react";
+import axios from "axios";
 
-const List = () => {
+const List = () =>
+{
   const location = useLocation();
   const [destination, setDestination] = useState(location.state.destination);
   const [arrival, setArrival] = useState(location.state.arrival);
   const [date, setDate] = useState(location.state.date);
   const [openDate, setOpenDate] = useState(false);
   const [options, setOptions] = useState(location.state.options);
+  const [trip, setTrip] = useState([]);
+
+  useEffect(() =>
+  {
+    axios.get('http://localhost:8000/api/trip')
+      .then((res) =>
+      {
+        setTrip(res.data);
+        console.log(setTrip);
+
+      })
+      .catch((err) =>
+      {
+        console.log(err);
+      });
+  }, []);
+
+  console.log("dd", trip);
 
   return (
+  
     <div>
       <Navbar />
       <Header type="list" />
@@ -24,13 +46,12 @@ const List = () => {
           <div className="listSearch">
             <h1 className="lsTitle">Search</h1>
             <div className="lsItem">
-              <label>Destination</label>
-              <input placeholder={destination} type="text" />
+             
+                  <input placeholder={trip.cityArrival} type="text" />
             </div>
             <div className="lsItem">
-              <label>Arrival</label>
-              <input placeholder={arrival} type="text" />
-              
+
+              <input placeholder={trip.cityDepart} type="text" />
             </div>
             <div className="lsItem">
               <label>Check-in Date</label>
@@ -79,32 +100,20 @@ const List = () => {
                     placeholder={options.children}
                   />
                 </div>
-                <div className="lsOptionItem">
-                  <span className="lsOptionText">Room</span>
-                  <input
-                    type="number"
-                    min={1}
-                    className="lsOptionInput"
-                    placeholder={options.room}
-                  />
-                </div>
+              
               </div>
             </div>
             <button>Search</button>
           </div>
           <div className="listResult">
-            <SearchItem />
-            <SearchItem />
-            <SearchItem />
-            <SearchItem />
-            <SearchItem />
-            <SearchItem />
-            <SearchItem />
-            <SearchItem />
-            <SearchItem />
+            {trip.map((item) => 
+              <SearchItem item={item} />
+            )}
+            
           </div>
         </div>
       </div>
+
     </div>
   );
 };

@@ -3,7 +3,7 @@ import dotenv from "dotenv";
 import mongoose from "mongoose";
 import bodyParser from "body-parser";
 import cookieParser from "cookie-parser";
-// var cors = require('cors')
+import cors from "cors";
 import authRoutes from "./routes/auth.js"; 
 import usersRoutes from "./routes/users.js"; 
 import tripRoutes from "./routes/trip.js"; 
@@ -11,7 +11,7 @@ import bussRoutes from "./routes/buss.js";
 // set up express app 
 const app = Express();
 dotenv.config();
-// app.use(cors());
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false })  );
 const connect = async () => {
@@ -27,7 +27,7 @@ try{
 mongoose.connection.on("disconnected", () => {
     console.log("MongoDB disconnected");
 });
-
+app.use(cors());
 app.use(cookieParser());
 //middleware
 app.use("/api/auth", authRoutes);

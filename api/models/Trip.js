@@ -33,6 +33,9 @@ const TripSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    photos: {
+        type: [String],
+    },
     description: {
         type: String,
         required: true

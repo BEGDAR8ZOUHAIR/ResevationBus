@@ -32,7 +32,7 @@
 
 .siTaxiOp {
   font-size: 12px;
-  background-color: #d63384;
+  background-color: #008009;
   color: white;
   width: max-content;
   padding: 3px;
@@ -50,7 +50,7 @@
 
 .siCancelOp{
   font-size: 12px;
-  color: #d63384;
+  color: #008009;
   font-weight: bold;
 }
 
@@ -75,7 +75,7 @@
   font-weight: 500;
 }
 .siRating>button{
- background-color: #6f42c1;
+ background-color: #003580;
  color: white;
  padding: 5px;
  font-weight: bold;
@@ -99,7 +99,7 @@
 }
 
 .siCheckButton{
-  background-color: #6f42c1;
+  background-color: #0071c2;
   color: white;
   font-weight: bold;
   padding: 10px 5px;

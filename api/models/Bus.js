@@ -16,6 +16,11 @@ const BusSchema = new mongoose.Schema({
         type: Number,
         required: true,
     },
+    busimage: {
+        type: String,
+        required: true,
+    },
+
     description: {
         type: String,
         required: true,

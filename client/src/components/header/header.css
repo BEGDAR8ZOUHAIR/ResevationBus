@@ -1,5 +1,5 @@
 .header {
-  background-color: #6f42c1;
+  background-color: #14123D;
   color: white;
   display: flex;
   justify-content: center;
@@ -18,8 +18,7 @@
 
 .headerList {
   display: flex;
-  text-align: center;
-  gap: 50px;
+  gap: 40px;
   margin-bottom: 50px;
 }
 
@@ -40,7 +39,7 @@
 }
 
 .headerBtn {
-  background-color: #d63384;
+  background-color: #14123D;
   color: white;
   font-weight: 500;
   border: none;
@@ -51,7 +50,7 @@
 .headerSearch {
   height: 30px;
   background-color: white;
-  border: 3px solid #d63384;
+  border: 3px solid #febb02;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -118,8 +117,8 @@
 .optionCounterButton {
   width: 30px;
   height: 30px;
-  border: 1px solid #d63384;
-  color: #d63384;
+  border: 1px solid #14123D;
+  color: #0071c2;
   cursor: pointer;
   background-color: white;
 }
@@ -127,9 +126,3 @@
 .optionCounterButton:disabled {
   cursor: not-allowed;
 }
-/* media queries */
-@media screen and (max-width:650px) {
-
-
-}
-

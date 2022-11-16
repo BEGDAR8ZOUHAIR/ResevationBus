@@ -58,12 +58,19 @@ export const getAllTrips = async (req, res) => {
          res.status(500).json(error);
     }
 };
+// get all trips by city
 export const countByCity = async (req, res, next) =>
 {
-    console.log(req.body.cityDepart, req.body.cityArrival);
+    const cities = req.query.cities.split(",");
     try
     {
-        const list = await Trip.find({ cityDepart: req.body.cityDepart, cityArrival: req.body.cityArrival });
+        const list = await Promise.all(
+            cities.map((city) =>
+            {
+                return Trip.countDocuments({ cityDepart: city, cityArrive: city });
+                console.log(list);
+            })
+        );
         res.status(200).json(list);
     } catch (err)
     {
