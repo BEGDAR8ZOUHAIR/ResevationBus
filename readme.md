@@ -62,7 +62,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 # Author
 
-- [Zouhair begdar medium](https://medium.com/@zouhairbegdar)
+- [Zouhair begdar medium](https://medium.com/@begdar8zouhair)
 - [zouhair begdar linkedin](https://www.linkedin.com/in/zouhair-begdar)
 
 
