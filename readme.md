@@ -1,67 +1,134 @@
+<h1 align="center">
+Markourb.com
+<br>
+<br>
+<a href="https://github.com/abdelhaq-laachari" target="_blank">
+<img src="https://source.unsplash.com/T5jzpRTVF1U" width="600"/>
+</a>
 
-# conception UML 
- -diagramme de classe: https://lucid.app/lucidchart/b12551d8-9f79-4311-8239-7f6de8404318/edit?invitationId=inv_ac8bfdca-bc90-47fe-9004-4097c031c29c&page=0_0#
+</h1>
 
- # React Documentation
-    -yarn to install dependencies
-    -yarn start to start the project
-    -yarn add react-router-dom to install react-router-dom
+## Description
 
-  # REST API docs
+<h2 align="center">A simple and easy to use web application for managing tours and bookings.</h2>
 
-## Parameters
+# Conception
 
-## GET
-1. use the **GET** method with the associated parameters link to get all records from DB,   
-example: `domain-name.com/parameters/endpoint`   
-a response with **200** status code and all records in json format will be returned if the DB not empty
+### Class Diagram
 
-## POST  
-2. use the **POST** method with the associated parameters link to create new record in DB:   
-accceptable data are json object that contains at least id and required fields example:    
+<h1 align="center">
+ <img src="./conception/class-diagram/class-diagram.png" width="700"/>
+</h1>
+
+### Use Case Diagram
+
+<h1 align="center">
+ <img src="./conception/use-case/use-case-diagram.png" width="700"/>
+</h1>
+
+
+# Installation
+
+### Prerequisites
+
+- [Node.js](https://nodejs.org/en/download/)
+- [MongoDB](https://www.mongodb.com/download-center/community)
+
+### Installation
+
+- Clone the repository
+
+```bash
+git clone
 ```
-{
-    "id": 1,
-    "required_field_1": "required field",
-    "required_field_2": "required field",  
-    ...
-}
-```   
-if data are valid a response with **201** status code and the object itself will returned, otherwise a **400** response will raise 
 
-## PUT  
-3. use the **PUT** method with the associated `domain-name.com/parameters/endpoint/id`  link to partial update a record in DB with the paramaters to be replaced, take in mind that after the endpoint you have to add the id of record and also in the json data  
-example:   
+- Install dependencies
+
+```bash
+npm install
 ```
-{
-    "id": 1,
-    "required_field_1": "updated data", 
-}
+
+- Run the application
+
+```bash
+npm start
 ```
-a thrown request with **200** status code and the updated object will returned   
 
-## DELETE
-1. use the **DELETE** method with the id to be deleted   
-example: `domain-name.com/parameters/endpoint/id`   
-a response with **204** status code will be returned if the DB not empty
+- Open the application in your browser
+
+```bash
+http://localhost:3000
+```
+
+# Usage
+
+### User
+
+- Sign up
+
+- Sign in
+
+- Sign out
+
+- Update profile
+
+- Book a tour
+
+- View all tours
+
+- View a tour
+
+- View all bookings
+
+- View a booking
+
+### Admin
+
+- Sign up
+
+- Sign in
+
+- Sign out
+
+- Update profile
+
+- Create a tour
+
+- Update a tour
+
+- Delete a tour
+
+- View all tours
+
+- View a tour
+
+- View all bookings
+
+- View a booking
+
+# Technologies
+
+- [React](https://reactjs.org/)
+- [Node.js](https://nodejs.org/en/)
+- [Express.js](https://expressjs.com/)
+- [MongoDB](https://www.mongodb.com/)
+- [Mongoose](https://mongoosejs.com/)
+- [Dotenv](https://www.npmjs.com/package/dotenv)
+- [Nodemon](https://www.npmjs.com/package/nodemon)
+- [Tailwind CSS](https://tailwindcss.com/)
+
+# License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
+
+# Author
+
+- [Abdelhaq Laachari medium](https://medium.com/@abdelhaqlaachari)
+- [Abdelhaq Laachari linkedin](https://www.linkedin.com/in/abdelhaq-laachari/)
+- [Abdelhaq Laachari github](https://github.com/abdelhaq-laachari)
+
+# Note 
+
+This project use a package that i created for managing moroccan cities in a simple way, you can find it here [list-of-moroccan-cities](https://www.npmjs.com/package/list-of-moroccan-cities) or you can see the repository [here](https://github.com/abdelhaq-laachari/Moroccan-cities)
 
 
-
-# Tables
-**URL :** `api/parameters/ `
-## TRIPS
-**ENDPOINT :** `trip/ `  
-**Fields** :  
-- **id** : Integer primary key
-- **arrivalTime** :type:Date  required= true
-- **departureTime** :type:Date  required= true 
-- **tripTime** : type:Date required= true 
-- **tripDistance** :type:Number required= true 
-- **tripCost** : type:Number required= true 
-- **tripStatus** : type:String, required= true 
-- **tripType** : type:String, required= true 
-- **cityDepart** : type:String, required= true 
-- **cityArrival** : type:String, required= true 
-- **timeArrival** : type:Date required= true 
-- **timeDeparture** : type:Date required= true 
-- **description** : type:String, required= true 
