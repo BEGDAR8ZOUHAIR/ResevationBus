@@ -2,29 +2,13 @@
 Markourb.com
 <br>
 <br>
-<a href="https://github.com/abdelhaq-laachari" target="_blank">
-<img src="https://source.unsplash.com/T5jzpRTVF1U" width="600"/>
-</a>
+
 
 </h1>
 
 ## Description
 
-<h2 align="center">A simple and easy to use web application for managing tours and bookings.</h2>
-
-# Conception
-
-### Class Diagram
-
-<h1 align="center">
- <img src="./conception/class-diagram/class-diagram.png" width="700"/>
-</h1>
-
-### Use Case Diagram
-
-<h1 align="center">
- <img src="./conception/use-case/use-case-diagram.png" width="700"/>
-</h1>
+<h2 align="center">Applicztion for reservation bus </h2>
 
 
 # Installation
@@ -60,51 +44,6 @@ npm start
 http://localhost:3000
 ```
 
-# Usage
-
-### User
-
-- Sign up
-
-- Sign in
-
-- Sign out
-
-- Update profile
-
-- Book a tour
-
-- View all tours
-
-- View a tour
-
-- View all bookings
-
-- View a booking
-
-### Admin
-
-- Sign up
-
-- Sign in
-
-- Sign out
-
-- Update profile
-
-- Create a tour
-
-- Update a tour
-
-- Delete a tour
-
-- View all tours
-
-- View a tour
-
-- View all bookings
-
-- View a booking
 
 # Technologies
 
@@ -123,12 +62,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 # Author
 
-- [Abdelhaq Laachari medium](https://medium.com/@abdelhaqlaachari)
-- [Abdelhaq Laachari linkedin](https://www.linkedin.com/in/abdelhaq-laachari/)
-- [Abdelhaq Laachari github](https://github.com/abdelhaq-laachari)
+- [Zouhair begdar medium](https://medium.com/@zouhairbegdar)
+- [zouhair begdar linkedin](https://www.linkedin.com/in/zouhair-begdar)
 
-# Note 
 
-This project use a package that i created for managing moroccan cities in a simple way, you can find it here [list-of-moroccan-cities](https://www.npmjs.com/package/list-of-moroccan-cities) or you can see the repository [here](https://github.com/abdelhaq-laachari/Moroccan-cities)
 
 
